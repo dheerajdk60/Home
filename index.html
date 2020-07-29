@@ -1,39 +1,67 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<html lang="en" style="background:darkgrey;">
-  <head>
-   <style>
-	html,body{height:100%;width:100%;}
-	a{
-		text-decoration:none;
-			
-	}
-	.container{
-		
-		display:flex;
-		allign-elements:center;
-		justify-content:center;
-		vertical-height:50vh;
-		allign-text:center;
-	}
-	.anc{
-		display:block;
-		paddding:10px;
-		background-color:white;	
-		width:100px;
-        }
-	</style>
-  </head>
-  <body>
-	<div class ="container">
-		<div class="anc">
-		<a href="https://1dheeraj1.github.io/DK60_1/">ROOM 1</a>
-	</div>
-	<div class="anc">
-		<a href="https://1dheeraj1.github.io/2DK60/">ROOM 2</a>
-	</div>
-	</div>
+<!doctype html>
+<html>
+    <head>
+        <title>Menu Items Hover Effect</title>
+        <link href="style.css" type="text/css" rel="stylesheet">
+	<style>
+body
+{
+   background: #001;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container ul li {
+    list-style:none;    
+}
+a{  
+    text-transform: uppercase;
+    display: block;
+    margin: 10px;
+    overflow: hidden;
+    padding: 5px 10px;
+     font-size: 20px;
+    background:#05f;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+ul:hover li a{
+    opacity: 0;
+}
+ul li a:hover{
+    transform: scale(1.4);
+    background: #f48;
+    opacity: 1;
+}
+ul li a:before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,0.8),transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+}
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <ul>
+                    <li data-text="Home"><a href="https://1dheeraj1.github.io/DK60_1/">Room 1</a></li>
+                <li data-text="About"><a href="#">Room 2</a></li>
+                <li data-text="Services"><a href="#">Room 3</a></li>
+                <li data-text="Portfolio"><a href="#">Room 4</a></li>
+                <li data-text="Team"><a href="https://1dheeraj1.github.io/2DK60/">Room 5</a></li>
+                <li data-text="Contact"><a href="#">Room 6</a></li>
+            </ul>
+        </div>
     </body>
 </html>
